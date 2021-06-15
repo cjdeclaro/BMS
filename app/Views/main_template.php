@@ -63,7 +63,6 @@
     <script src="<?= base_url('assets/monster-admin/plugins/flot/jquery.flot.js') ?>"></script>
     <script src="<?= base_url('assets/monster-admin/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') ?>"></script>
     <script src="<?= base_url('assets/custom/js/pages/dashboards/dashboard1.js') ?>"></script>
-    <script src="<?= base_url($scripts) ?>"></script>
 
 </body>
 </html>

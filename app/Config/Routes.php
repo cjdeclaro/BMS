@@ -33,6 +33,11 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Dashboard::index');
+$routes->get('reporting-person', 'Dashboard::reporting_person');
+$routes->get('suspect-data', 'Dashboard::suspect_data');
+$routes->get('victim-data', 'Dashboard::victim_data');
+$routes->get('narrative-of-incidents', 'Dashboard::narrative_of_incidents');
+$routes->get('reports', 'Dashboard::reports');
 
 /*
  * --------------------------------------------------------------------
