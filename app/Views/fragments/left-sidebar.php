@@ -24,7 +24,7 @@
                                     aria-hidden="true"></i><span class="hide-menu">Victim Data</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="<?= base_url('narrative-of-incidents') ?>" aria-expanded="false"><i class="me-3 fa fa-columns"
-                                    aria-hidden="true"></i><span class="hide-menu">Narative of Incidents</span></a></li>
+                                    aria-hidden="true"></i><span class="hide-menu">Narrative of Incidents</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="<?= base_url('reports') ?>" aria-expanded="false"><i class="me-3 fa fa-info-circle"
                                     aria-hidden="true"></i><span class="hide-menu">Reports</span></a></li>

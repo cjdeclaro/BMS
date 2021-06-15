@@ -19,3 +19,52 @@
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    
+                    <div class="col-sm-12 col-md-3 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Pending Cases</h4>
+                                <div class="text-end">
+                                    <h2 class="font-light mb-0">
+                                        <i class="ti-arrow-up text-success"></i> 0
+                                    </h2>
+                                    <span class="text-muted">Total</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-3 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Cases Today</h4>
+                                <div class="text-end">
+                                    <h2 class="font-light mb-0">
+                                        <i class="ti-arrow-up text-primary"></i> 0
+                                    </h2>
+                                    <span class="text-muted">Total</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                    
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex col-md-10 mb-md-0 mb-3 align-self-center">Overview</div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+
+            </div>
