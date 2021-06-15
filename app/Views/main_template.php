@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/monster-admin/images/favicon.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/custom/images/favicon.png') ?>">
     <!-- Custom CSS -->
     <link href="<?= base_url('assets/monster-admin/plugins/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
     <!-- Custom CSS -->

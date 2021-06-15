@@ -12,7 +12,7 @@
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="<?= base_url('assets/monster-admin/images/logo-icon.png') ?>" alt="homepage" class="dark-logo" />
+                            <img src="<?= base_url('assets/custom/images/logo.png') ?>" alt="homepage" class="dark-logo" width="35px" />
 
                         </b>
                         <!--End Logo icon -->
