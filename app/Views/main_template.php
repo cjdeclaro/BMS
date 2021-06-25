@@ -11,6 +11,7 @@
     <link href="<?= base_url('assets/monster-admin/plugins/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<?= base_url('assets/custom/css/style.min.css') ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url('assets/custom/css/custom.css') ?>">
 </head>
 <body>
 
@@ -48,6 +49,7 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    <script>var base_url = '<?= base_url() ?>';</script>
     <script src="<?= base_url('assets/monster-admin/plugins/jquery/dist/jquery.min.js') ?>"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?= base_url('assets/monster-admin/plugins/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
@@ -58,6 +60,8 @@
     <script src="<?= base_url('assets/custom/js/sidebarmenu.js') ?>"></script>
     <!--Custom JavaScript -->
     <script src="<?= base_url('assets/custom/js/custom.js') ?>"></script>
+    <!-- page script -->
+    <script src="<?= base_url($scripts) ?>"></script>
     <!--This page JavaScript -->
     <!--flot chart-->
     <script src="<?= base_url('assets/monster-admin/plugins/flot/jquery.flot.js') ?>"></script>

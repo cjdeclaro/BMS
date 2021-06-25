@@ -39,6 +39,7 @@ $routes->get('victim-data', 'Dashboard::victim_data');
 $routes->get('narrative-of-incidents', 'Dashboard::narrative_of_incidents');
 $routes->get('reports', 'Dashboard::reports');
 $routes->get('login', 'Login::index');
+$routes->get('add-blotter', 'Dashboard::add_blotter');
 
 /*
  * --------------------------------------------------------------------

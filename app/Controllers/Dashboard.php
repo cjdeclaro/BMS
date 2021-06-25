@@ -8,7 +8,17 @@ class Dashboard extends BaseController {
         $data = [
             'title'     => 'Dashboard',
             'content'   => 'dashboard/index',
-            'scripts'   => 'js/index.php'
+            'scripts'   => 'js/index.js'
+        ];
+
+        return view('main_template', $data);
+    }
+
+    public function add_blotter() {
+        $data = [
+            'title'     => 'Add Blotter',
+            'content'   => 'dashboard/add_blotter',
+            'scripts'   => 'js/add-blotter.js'
         ];
 
         return view('main_template', $data);
