@@ -66,3 +66,9 @@ $(document).ready(function(){
     })
     
     });
+
+    $(function() {
+        $('#summernote').summernote();
+    });
+    
+

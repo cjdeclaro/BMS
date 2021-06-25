@@ -12,6 +12,17 @@
     <!-- Custom CSS -->
     <link href="<?= base_url('assets/custom/css/style.min.css') ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url('assets/custom/css/custom.css') ?>">
+
+    <?php
+
+    if(isset($summernote)) {
+        ?>
+        <link rel="stylesheet" href="<?= $summernote ?>">
+        <?php
+    }
+
+    ?>
+
 </head>
 <body>
 
@@ -61,6 +72,17 @@
     <!--Custom JavaScript -->
     <script src="<?= base_url('assets/custom/js/custom.js') ?>"></script>
     <!-- page script -->
+
+    <?php
+
+    if(isset($summernotejs)) {
+        ?>
+        <script src="<?= $summernotejs ?>"></script>
+        <?php
+    }
+
+    ?>
+
     <script src="<?= base_url($scripts) ?>"></script>
     <!--This page JavaScript -->
     <!--flot chart-->
