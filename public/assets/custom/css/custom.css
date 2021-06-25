@@ -8,7 +8,7 @@ html {
 }
 
 #grad1 {
-    background-color: : #9C27B0;
+    background-color: #9C27B0;
     background-image: linear-gradient(120deg, #FF4081, #81D4FA)
 }
 
@@ -60,7 +60,6 @@ html {
     margin-top: 2px;
     width: 100%;
     box-sizing: border-box;
-    font-family: montserrat;
     color: #2C3E50;
     font-size: 16px;
     letter-spacing: 1px
@@ -73,13 +72,13 @@ html {
     box-shadow: none !important;
     border: none;
     font-weight: bold;
-    border-bottom: 2px solid skyblue;
+    border-bottom: 2px solid #004f21;
     outline-width: 0
 }
 
 #msform .action-button {
     width: 100px;
-    background: skyblue;
+    background: #004f21;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -91,7 +90,7 @@ html {
 
 #msform .action-button:hover,
 #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #004f21
 }
 
 #msform .action-button-previous {
@@ -120,7 +119,7 @@ select.list-dt {
 }
 
 select.list-dt:focus {
-    border-bottom: 2px solid skyblue
+    border-bottom: 2px solid #004f21
 }
 
 .card {
@@ -158,22 +157,22 @@ select.list-dt:focus {
 
 #progressbar #account:before {
     font-family: FontAwesome;
-    content: "\f023"
+    content: 'R'
 }
 
 #progressbar #personal:before {
     font-family: FontAwesome;
-    content: "\f007"
+    content: "S"
 }
 
 #progressbar #payment:before {
     font-family: FontAwesome;
-    content: "\f09d"
+    content: "V"
 }
 
 #progressbar #confirm:before {
     font-family: FontAwesome;
-    content: "\f00c"
+    content: "N"
 }
 
 #progressbar li:before {
@@ -202,7 +201,7 @@ select.list-dt:focus {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-    background: skyblue
+    background: #004f21
 }
 
 .radio-group {

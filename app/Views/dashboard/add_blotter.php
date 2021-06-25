@@ -27,24 +27,127 @@
 
                         <div class="card">
                             <div class="card-body wizard-content">
-                             
-                                <h2><strong>Sign Up Your User Account</strong></h2>
-                                <p>Fill all form field to go to next step</p>
                                 <div class="row">
                                     <div class="col-md-12 mx-0">
                                         <form id="msform">
                                             <!-- progressbar -->
                                             <ul id="progressbar">
-                                                <li class="active" id="account"><strong>Account</strong></li>
-                                                <li id="personal"><strong>Personal</strong></li>
-                                                <li id="payment"><strong>Payment</strong></li>
-                                                <li id="confirm"><strong>Finish</strong></li>
+                                                <li class="active" id="account"><strong>Reporting Person</strong></li>
+                                                <li id="personal"><strong>Suspect Data</strong></li>
+                                                <li id="payment"><strong>Victim Data</strong></li>
+                                                <li id="confirm"><strong>Narrative of Incident</strong></li>
                                             </ul> <!-- fieldsets -->
                                             <fieldset>
-                                                <div class="form-card">
-                                                    <h2 class="fs-title">Account Information</h2> <input type="email" name="email" placeholder="Email Id" /> <input type="text" name="uname" placeholder="UserName" /> <input type="password" name="pwd" placeholder="Password" /> <input type="password" name="cpwd" placeholder="Confirm Password" />
-                                                </div> <input type="button" name="next" class="next action-button" value="Next Step" />
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Last Name:</label>
+                                                            <input type="text" name="lastname" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>First Name:</label>
+                                                            <input type="text" name="firstname" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Middle Name:</label>
+                                                            <input type="text" name="middlename" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="form-group">
+                                                            <label>Nick Name:</label>
+                                                            <input type="text" name="nickname" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-group">
+                                                            <label>Citizenship:</label>
+                                                            <input type="text" name="citizenship" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-group">
+                                                            <label>Civil Status:</label>
+                                                            <select name="civil_status" class="form-control">
+                                                                <option value="">-- choose --</option>
+                                                                <option value="Single">Single</option>
+                                                                <option value="Married">Married</option>
+                                                                <option value="Divorced">Divorced</option>
+                                                                <option value="Widowed">Widowed</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-group">
+                                                            <label>Birthday:</label>
+                                                            <input type="date" name="citizenship" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Phone Number:</label>
+                                                            <input type="text" name="phone" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Home Number:</label>
+                                                            <input type="text" name="home" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Email Address:</label>
+                                                            <input type="email" name="email" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label>Address 1:</label>
+                                                            <textarea name="address-1" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label>Address 2:</label>
+                                                            <textarea name="address-2" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Highest Educational Attainment:</label>
+                                                            <input type="text" name="education" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Occupation:</label>
+                                                            <input type="text" name="occupation" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>ID Card Presented:</label>
+                                                            <input type="text" name="id-presented" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <input type="button" name="next" class="next action-button" value="Next Step" />
                                             </fieldset>
+
                                             <fieldset>
                                                 <div class="form-card">
                                                     <h2 class="fs-title">Personal Information</h2> <input type="text" name="fname" placeholder="First Name" /> <input type="text" name="lname" placeholder="Last Name" /> <input type="text" name="phno" placeholder="Contact No." /> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
