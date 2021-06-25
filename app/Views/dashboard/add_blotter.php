@@ -42,19 +42,19 @@
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Last Name:</label>
-                                                            <input type="text" name="lastname" class="form-control">
+                                                            <input type="text" name="reporting[lastname]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>First Name:</label>
-                                                            <input type="text" name="firstname" class="form-control">
+                                                            <input type="text" name="reporting[firstname]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Middle Name:</label>
-                                                            <input type="text" name="middlename" class="form-control">
+                                                            <input type="text" name="reporting[middlename]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -62,19 +62,19 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Nick Name:</label>
-                                                            <input type="text" name="nickname" class="form-control">
+                                                            <input type="text" name="reporting[nickname]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Citizenship:</label>
-                                                            <input type="text" name="citizenship" class="form-control">
+                                                            <input type="text" name="reporting[citizenship]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Civil Status:</label>
-                                                            <select name="civil_status" class="form-control">
+                                                            <select name="reporting[civil_status]" class="form-control">
                                                                 <option value="">-- choose --</option>
                                                                 <option value="Single">Single</option>
                                                                 <option value="Married">Married</option>
@@ -86,7 +86,7 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Birthday:</label>
-                                                            <input type="date" name="citizenship" class="form-control">
+                                                            <input type="date" name="reporting[birthday]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -94,19 +94,19 @@
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Phone Number:</label>
-                                                            <input type="text" name="phone" class="form-control">
+                                                            <input type="text" name="reporting[phone]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Home Number:</label>
-                                                            <input type="text" name="home" class="form-control">
+                                                            <input type="text" name="reporting[home-no]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Email Address:</label>
-                                                            <input type="email" name="email" class="form-control">
+                                                            <input type="email" name="reporting[email]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -114,13 +114,13 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label>Address 1:</label>
-                                                            <textarea name="address-1" class="form-control"></textarea>
+                                                            <textarea name="reporting[address-1]" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label>Address 2:</label>
-                                                            <textarea name="address-2" class="form-control"></textarea>
+                                                            <textarea name="reporting[address-2]" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -128,19 +128,19 @@
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Highest Educational Attainment:</label>
-                                                            <input type="text" name="education" class="form-control">
+                                                            <input type="text" name="reporting[education]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Occupation:</label>
-                                                            <input type="text" name="occupation" class="form-control">
+                                                            <input type="text" name="reporting[occupation]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>ID Card Presented:</label>
-                                                            <input type="text" name="id-presented" class="form-control">
+                                                            <input type="text" name="reporting[id-presented]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -154,25 +154,25 @@
                                                         <div class="col-3">
                                                             <div class="form-group">
                                                                 <label>Last Name:</label>
-                                                                <input type="text" name="lastname" class="form-control">
+                                                                <input type="text" name="suspect[lastname]" class="form-control">
                                                             </div>
                                                         </div>
                                                         <div class="col-3">
                                                             <div class="form-group">
                                                                 <label>First Name:</label>
-                                                                <input type="text" name="firstname" class="form-control">
+                                                                <input type="text" name="suspect[firstname]" class="form-control">
                                                             </div>
                                                         </div>
                                                         <div class="col-3">
                                                             <div class="form-group">
                                                                 <label>Middle Name:</label>
-                                                                <input type="text" name="middlename" class="form-control">
+                                                                <input type="text" name="suspect[middlename]" class="form-control">
                                                             </div>
                                                         </div>
                                                         <div class="col-3">
                                                             <div class="form-group">
                                                                 <label>Gender:</label>
-                                                                <select name="gender" class="form-control">
+                                                                <select name="suspect[gender]" class="form-control">
                                                                     <option value="">-- select --</option>
                                                                     <option value="Male">Male</option>
                                                                     <option value="Female">Female</option>
@@ -184,19 +184,19 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Nick Name:</label>
-                                                            <input type="text" name="nickname" class="form-control">
+                                                            <input type="text" name="suspect[nickname]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Citizenship:</label>
-                                                            <input type="text" name="citizenship" class="form-control">
+                                                            <input type="text" name="suspect[citizenship]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Civil Status:</label>
-                                                            <select name="civil_status" class="form-control">
+                                                            <select name="suspect[civil_status]" class="form-control">
                                                                 <option value="">-- choose --</option>
                                                                 <option value="Single">Single</option>
                                                                 <option value="Married">Married</option>
@@ -208,7 +208,7 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Qualifier:</label>
-                                                            <input type="text" name="qualifier" class="form-control">
+                                                            <input type="text" name="suspect[qualifier]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -216,13 +216,13 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label>Address 1:</label>
-                                                            <textarea name="address-1" class="form-control"></textarea>
+                                                            <textarea name="suspect[address-1]" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label>Address 2:</label>
-                                                            <textarea name="address-2" class="form-control"></textarea>
+                                                            <textarea name="suspect[address-2]" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -230,19 +230,19 @@
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>High Educational Attainment:</label>
-                                                            <input type="text" name="education" class="form-control">
+                                                            <input type="text" name="suspect[education]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Occupation:</label>
-                                                            <input type="text" name="occupation" class="form-control">
+                                                            <input type="text" name="suspect[occupation]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>ID Card Presented:</label>
-                                                            <input type="text" name="id-presented" class="form-control">
+                                                            <input type="text" name="suspect[id-presented]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -250,31 +250,31 @@
                                                     <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Height:</label>
-                                                            <input type="text" name="height" class="form-control">
+                                                            <input type="text" name="suspect[height]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Weight:</label>
-                                                            <input type="text" name="weight" class="form-control">
+                                                            <input type="text" name="suspect[weight]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Color of Eyes:</label>
-                                                            <input type="text" name="eyes-color" class="form-control">
+                                                            <input type="text" name="suspect[eyes-color]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Color of Hair:</label>
-                                                            <input type="text" name="hair-color" class="form-control">
+                                                            <input type="text" name="suspect[hair-color]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Under Influence of:</label>
-                                                            <input type="text" name="influence-of" class="form-control">
+                                                            <input type="text" name="suspect[influence-of]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -329,25 +329,25 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Last Name:</label>
-                                                            <input type="text" name="lastname" class="form-control">
+                                                            <input type="text" name="victim[lastname]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>First Name:</label>
-                                                            <input type="text" name="firstname" class="form-control">
+                                                            <input type="text" name="victim[firstname]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Middle Name:</label>
-                                                            <input type="text" name="middlename" class="form-control">
+                                                            <input type="text" name="victim[middlename]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Gender:</label>
-                                                            <select name="gender" class="form-control">
+                                                            <select name="victim[gender]" class="form-control">
                                                                 <option value="">-- select --</option>
                                                                 <option value="Male">Male</option>
                                                                 <option value="Female">Female</option>
@@ -359,19 +359,19 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Nick Name:</label>
-                                                            <input type="text" name="nickname" class="form-control">
+                                                            <input type="text" name="victim[nickname]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Citizenship:</label>
-                                                            <input type="text" name="citizenship" class="form-control">
+                                                            <input type="text" name="victim[citizenship]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Civil Status:</label>
-                                                            <select name="civil_status" class="form-control">
+                                                            <select name="victim[civil_status]" class="form-control">
                                                                 <option value="">-- choose --</option>
                                                                 <option value="Single">Single</option>
                                                                 <option value="Married">Married</option>
@@ -383,7 +383,7 @@
                                                     <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Birthday:</label>
-                                                            <input type="date" name="citizenship" class="form-control">
+                                                            <input type="date" name="victim[birthday]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -391,19 +391,19 @@
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Phone Number:</label>
-                                                            <input type="text" name="phone" class="form-control">
+                                                            <input type="text" name="victim[phone]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Home Number:</label>
-                                                            <input type="text" name="home" class="form-control">
+                                                            <input type="text" name="victim[home-no]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Email Address:</label>
-                                                            <input type="email" name="email" class="form-control">
+                                                            <input type="email" name="victim[email]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -411,13 +411,13 @@
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label>Address 1:</label>
-                                                            <textarea name="address-1" class="form-control"></textarea>
+                                                            <textarea name="victim[address-1]" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <div class="form-group">
                                                             <label>Address 2:</label>
-                                                            <textarea name="address-2" class="form-control"></textarea>
+                                                            <textarea name="victim[address-2]" class="form-control"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -425,19 +425,19 @@
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Highest Educational Attainment:</label>
-                                                            <input type="text" name="education" class="form-control">
+                                                            <input type="text" name="victim[education]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>Occupation:</label>
-                                                            <input type="text" name="occupation" class="form-control">
+                                                            <input type="text" name="victim[occupation]" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-group">
                                                             <label>ID Card Presented:</label>
-                                                            <input type="text" name="id-presented" class="form-control">
+                                                            <input type="text" name="victim[id-presented]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
