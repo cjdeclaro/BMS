@@ -278,6 +278,47 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-4">
+                                                                    <div class="form-check">
+                                                                        <input style="width: 10px" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                                        <label class="form-check-label" for="defaultCheck1">
+                                                                            If AFP/PNP Personnel:
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-3">
+                                                                    <input type="text" name="rank" class="form-control" placeholder="Rank">
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <input type="text" name="unit-assignment" class="form-control" placeholder="Unit Assignment">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <div class="form-check">
+                                                                    <input style="width: 10px" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                                    <label class="form-check-label" for="defaultCheck1">
+                                                                        If with Previous Criminal Records:
+                                                                    </label>
+                                                                </div>                                                            
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <input type="text" name="prev-case-status" class="form-control" placeholder="Status of Previous Case">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
                                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 <input type="button" name="next" class="next action-button" value="Next Step" />
