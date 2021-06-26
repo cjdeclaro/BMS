@@ -104,7 +104,7 @@ class M_Blotter extends Model {
     }
 
     public function add_narration($data) {
-        $query  = "INSERT INTO narratives (blotter_entry_no, incident_type, incident_place, narration) VALUES (:blotter_entry_no:, :incident_type:, :incident_place:, :narration:)";
+        $query  = "INSERT INTO narrations (blotter_entry_no, incident_type, incident_place, narration) VALUES (:blotter_entry_no:, :incident_type:, :incident_place:, :narration:)";
         return $this->db->query($query, [
             'blotter_entry_no'  => $data['blotter_entry_no'],
             'incident_type'     => $data['incident_type'],
