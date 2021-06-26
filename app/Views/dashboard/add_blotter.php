@@ -284,14 +284,14 @@
                                                             <div class="row">
                                                                 <div class="col-4">
                                                                     <div class="form-check">
-                                                                        <input style="width: 10px" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                                        <label class="form-check-label" for="defaultCheck1">
+                                                                        <input style="width: 10px" class="form-check-input" type="checkbox" value="" id="if-police-personnel">
+                                                                        <label class="form-check-label" for="if-police-personnel">
                                                                             If AFP/PNP Personnel:
                                                                         </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row">
+                                                            <div class="row" id="police-personnel-data" style="display: none">
                                                                 <div class="col-3">
                                                                     <input type="text" name="rank" class="form-control" placeholder="Rank">
                                                                 </div>
