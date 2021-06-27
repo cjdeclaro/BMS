@@ -148,7 +148,7 @@ $(document).on('submit', '#msform', function(e) {
         url: base_url + '/api/blotter/add',
         headers: {'X-Requested-With': 'XMLHttpRequest'},
         type: 'POST',
-        data: $(this).serialize(),
+        data: formData,
         dataType: 'JSON',
         success: function(data) {
             console.log(data);
