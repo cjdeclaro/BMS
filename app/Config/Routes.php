@@ -41,6 +41,14 @@ $routes->get('reports', 'Dashboard::reports');
 $routes->get('login', 'Login::index');
 $routes->get('add-blotter', 'Dashboard::add_blotter');
 
+// APIs
+$routes->group('api', function($routes) {
+	$routes->group('blotter', function($routes) {
+		$routes->resource('blotter');
+		$routes->post('add', 'Blotter::add');
+	});
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

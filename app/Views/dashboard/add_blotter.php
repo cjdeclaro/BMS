@@ -147,7 +147,6 @@
 
                                                 <input type="button" name="next" class="next action-button" value="Next Step" />
                                             </fieldset>
-
                                             <fieldset>
                                                
                                                 <div class="row">
@@ -284,9 +283,9 @@
                                                             <div class="row">
                                                                 <div class="col-4">
                                                                     <div class="form-check">
-                                                                        <input style="width: 10px" class="form-check-input" type="checkbox" value="" id="if-police-personnel">
+                                                                        <input class="form-check-input" type="checkbox" value="" id="if-police-personnel">
                                                                         <label class="form-check-label" for="if-police-personnel">
-                                                                            If AFP/PNP Personnel:
+                                                                            If AFP/PNP Personnel
                                                                         </label>
                                                                     </div>
                                                                 </div>
@@ -303,16 +302,16 @@
                                                     </div>
                                                     <div class="col-5">
                                                         <div class="row">
-                                                            <div class="col-4">
+                                                            <div class="col-9">
                                                                 <div class="form-check">
-                                                                    <input style="width: 10px" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                                                     <label class="form-check-label" for="defaultCheck1">
-                                                                        If with Previous Criminal Records:
+                                                                        If with Previous Criminal Records
                                                                     </label>
                                                                 </div>                                                            
                                                             </div>
                                                         </div>
-                                                        <div class="row">
+                                                        <div class="row" id="previous-case-data" style="display: none">
                                                             <div class="col-md-12">
                                                                 <input type="text" name="prev-case-status" class="form-control" placeholder="Status of Previous Case">
                                                             </div>
@@ -468,7 +467,7 @@
                                                 </div>
                                                 
                                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                                <button type="button" class="action-button">Submit</button>
+                                                <button type="submit" class="action-button">Submit</button>
                                             </fieldset>
                                         </form>
                                     </div>
