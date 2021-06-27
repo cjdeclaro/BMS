@@ -34,9 +34,9 @@
         <!-- Login box.scss -->
         <!-- ============================================================== -->
 
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(../assets/images/background/login-register.jpg) no-repeat center center; background-size: cover;">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center">
             <div class="auth-box p-4 bg-white rounded">
-                <div id="loginform">
+                <div id="loginform1">
                     <div class="text-center">
                         <img src="<?= base_url('assets/custom/images/logo.png') ?>" alt="logo" width="100px">
                     </div>
@@ -46,14 +46,14 @@
                     <!-- Form -->
                     <div class="row">
                         <div class="col-12">
-                            <form class="form-horizontal mt-3 form-material" id="loginform" action="index.html">
+                            <form class="form-horizontal mt-3 form-material" id="loginform">
                                 <div class="form-group mb-3">
                                     <div class="">
-                                        <input class="form-control" type="text" required="" placeholder="Username"> </div>
+                                        <input class="form-control" name="username" type="text" required="" placeholder="Username"> </div>
                                 </div>
                                 <div class="form-group mb-4">
                                     <div class="">
-                                        <input class="form-control" type="password" required="" placeholder="Password"> </div>
+                                        <input class="form-control" name="password" type="password" required="" placeholder="Password"> </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="d-flex">
@@ -97,6 +97,7 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    <script> var base_url = '<?= base_url() ?>'; </script>
     <script src="<?= base_url('assets/monster-admin/plugins/jquery/dist/jquery.min.js') ?>"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?= base_url('assets/monster-admin/plugins/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
@@ -112,6 +113,7 @@
     <script src="<?= base_url('assets/monster-admin/plugins/flot/jquery.flot.js') ?>"></script>
     <script src="<?= base_url('assets/monster-admin/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') ?>"></script>
     <script src="<?= base_url('assets/custom/js/pages/dashboards/dashboard1.js') ?>"></script>
+    <script src="<?= base_url('js/login.js') ?>"></script>
 
 </body>
 </html>
