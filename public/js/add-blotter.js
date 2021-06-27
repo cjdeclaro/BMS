@@ -135,6 +135,15 @@ $(document).on('submit', '#msform', function(e) {
             var incident_place          = $('input[name="incident-place"]');
             var narration               = $('#summernote');
 
+    var contentStr  = $('#summernote').summernote('code');
+
+    if(contentStr == '<p><br></p>') {
+        contentStr = '';
+    }
+
+    var formData = $(this).serializeArray();
+    formData.push({ name: "narration", value:  contentStr});
+
     $.ajax({
         url: base_url + '/api/blotter/add',
         headers: {'X-Requested-With': 'XMLHttpRequest'},
@@ -212,7 +221,7 @@ $(document).on('submit', '#msform', function(e) {
             }
         },
         beforeSend: function() {
-
+            $('.invalid-feedback').remove();
         },
         complete: function() {
 
