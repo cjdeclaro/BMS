@@ -16,11 +16,12 @@ class Dashboard extends BaseController {
 
     public function add_blotter() {
         $data = [
-            'title'         => 'Add Blotter',
-            'content'       => 'dashboard/add_blotter',
-            'scripts'       => 'js/add-blotter.js',
-            'summernote'    => base_url('assets/summernote/summernote-bs4.min.css'),
-            'summernotejs'  => base_url('assets/summernote/summernote-bs4.min.js')
+            'title'             => 'Add Blotter',
+            'content'           => 'dashboard/add_blotter',
+            'scripts'           => 'js/add-blotter.js',
+            'summernote'        => base_url('assets/summernote/summernote-bs4.min.css'),
+            'summernotejs'      => base_url('assets/summernote/summernote-bs4.min.js'),
+            'blotter_no'         => 'B' . date('ymdhis')
         ];
 
         return view('main_template', $data);

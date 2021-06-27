@@ -25,6 +25,15 @@ class Blotter extends ResourceController {
         // validation rules
         $this->validation->withRequest($this->request)->setRules([
 
+            // Blotter #
+            'blotter_no' => [
+                'label' => 'Blotter Number',
+                'rules' => 'required',
+                'error' => [
+                    'required' => '{field} is required.'
+                ]
+            ],
+
             // Reporting Person Input Data
             'reporting.lastname'   => [
                 'label' => 'Last Name',

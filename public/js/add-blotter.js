@@ -155,9 +155,13 @@ $(document).on('submit', '#msform', function(e) {
         },
         error: function(data) {
             var data = data.responseJSON;
+
+            console.log(data.messages);
             
             if(data.messages) {
                 var messages = data.messages;
+
+               console.log(messages.reporting);
 
                 // Reporting Person Validations
                 fieldValidation(rprtng_lname, messages["reporting.lastname"]);

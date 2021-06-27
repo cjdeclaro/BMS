@@ -4,7 +4,7 @@
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-8 align-self-center">
-                        <h3 class="page-title mb-0 p-0">Add Blotter</h3>
+                        <h3 class="page-title mb-0 p-0">Blotter #: <?= $blotter_no ?></h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -466,6 +466,7 @@
                                                     </div>
                                                 </div>
                                                 
+                                                <input type="hidden" name="blotter_no" value="<?= $blotter_no ?>">
                                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 <button type="submit" class="action-button">Submit</button>
                                             </fieldset>
