@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2021 at 03:00 PM
+-- Generation Time: Jun 27, 2021 at 09:19 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `blotters` (
   `id` int(11) NOT NULL,
-  `blotter_entry_no` int(11) NOT NULL,
+  `blotter_entry_no` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL,
   `date_saved` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -54,7 +54,7 @@ CREATE TABLE `criminal_records` (
 
 CREATE TABLE `narrations` (
   `id` int(11) NOT NULL,
-  `blotter_entry_no` int(11) NOT NULL,
+  `blotter_entry_no` varchar(50) NOT NULL,
   `incident_type` varchar(100) NOT NULL,
   `incident_place` varchar(100) NOT NULL,
   `narration` text NOT NULL
@@ -81,7 +81,7 @@ CREATE TABLE `police_personnels` (
 
 CREATE TABLE `reporting_persons` (
   `id` int(11) NOT NULL,
-  `blotter_entry_no` int(11) NOT NULL,
+  `blotter_entry_no` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `middlename` varchar(50) NOT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE `reporting_persons` (
 
 CREATE TABLE `suspects` (
   `id` int(11) NOT NULL,
-  `blotter_entry_no` int(11) NOT NULL,
+  `blotter_entry_no` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `middlename` varchar(50) NOT NULL,
