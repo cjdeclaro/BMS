@@ -49,11 +49,11 @@
                             <form class="form-horizontal mt-3 form-material" id="loginform">
                                 <div class="form-group mb-3">
                                     <div class="">
-                                        <input class="form-control" name="username" type="text" required="" placeholder="Username"> </div>
+                                        <input class="form-control" name="username" type="text" placeholder="Username"> </div>
                                 </div>
                                 <div class="form-group mb-4">
                                     <div class="">
-                                        <input class="form-control" name="password" type="password" required="" placeholder="Password"> </div>
+                                        <input class="form-control" name="password" type="password" placeholder="Password"> </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="d-flex">

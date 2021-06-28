@@ -39,10 +39,18 @@ $routes->get('add-blotter', 'Dashboard::add_blotter');
 
 // APIs
 $routes->group('api', function($routes) {
+	
 	$routes->group('blotter', function($routes) {
 		$routes->resource('blotter');
 		$routes->post('add', 'Blotter::add');
 	});
+
+	$routes->group('login', function($routes) {
+		$routes->resource('login');
+		$routes->post('submit', 'LoginAction::login');
+		$routes->get('destroy-session', 'LoginAction::logout');
+	});
+
 });
 
 /*
