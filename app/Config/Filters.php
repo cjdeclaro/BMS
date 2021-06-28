@@ -19,7 +19,8 @@ class Filters extends BaseConfig
 		'csrf'     	=> CSRF::class,
 		'toolbar'  	=> DebugToolbar::class,
 		'honeypot' 	=> Honeypot::class,
-		'auth'		=> \App\Filters\Auth::class
+		'auth'		=> \App\Filters\Auth::class,
+		'login'		=> \App\Filters\Login::class
 	];
 
 	/**
@@ -62,6 +63,9 @@ class Filters extends BaseConfig
 	public $filters = [
 		'auth' => [
 			'before' => ['/', 'add-blotter/']
+		],
+		'login'	=> [
+			'before' => ['login/']
 		]
 	];
 }

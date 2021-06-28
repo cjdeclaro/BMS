@@ -71,7 +71,7 @@ class LoginAction extends ResourceController {
             'sess_email'        => $data['email'],
             'sess_phone'        => $data['phone'],
             'sess_role'         => $data['role'],
-            'sess_loggined_in'  => TRUE
+            'sess_logged_in'  => TRUE
         );
 
         return $this->session->set($sess_data);

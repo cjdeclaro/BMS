@@ -11,7 +11,10 @@ $(document).on('submit', '#loginform', function(e){
         data: $(this).serialize(),
         dataType: 'JSON',
         success: function(data) {
-            
+            $('<div class="alert alert-success">'+ data.success +' <i class="fa fa-spin fa-spinner"></i></div>').insertAfter('.logo');
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
         },
         error: function(data) {
             var data = data.responseJSON;
