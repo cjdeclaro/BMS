@@ -15,7 +15,7 @@ class LoginAction extends ResourceController {
         $this->validation       = \Config\Services::validation();
         $this->request          = \Config\Services::request();
         $this->session          = \Config\Services::session();
-        helper('form', 'url');
+        helper(['form', 'url']);
 
         // Models
         $this->m_login_action   = new \App\Models\M_LoginAction();
