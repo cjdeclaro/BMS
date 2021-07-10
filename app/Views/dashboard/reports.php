@@ -24,7 +24,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <table id="reports-table" class="table">
+                        <table id="reports-table" class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th class="text-center">Blotter #</th>

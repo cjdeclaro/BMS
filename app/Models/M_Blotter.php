@@ -189,23 +189,24 @@ class M_Blotter extends Model {
                 $reporting_name = $rprtng_row['firstname'] . ' ' . $rprtng_row['lastname'];
 
                 array_push($reporting_data, [
-                    'reporting_id'              => $rprtng_row['id'],
-                    'reporting_lastname'        => $rprtng_row['lastname'],
-                    'reporting_firstname'       => $rprtng_row['firstname'],
-                    'reporting_middlename'      => $rprtng_row['middlename'],
-                    'reporting_gender'          => $rprtng_row['gender'],
-                    'reporting_nickname'        => $rprtng_row['nickname'],
-                    'reporting_citizenship'     => $rprtng_row['citizenship'],
-                    'reporting_civil_status'    => $rprtng_row['civil_status'],
-                    'reporting_birthday'        => $rprtng_row['birthday'],
-                    'reporting_qualifier'       => $rprtng_row['qualifier'],
-                    'reporting_phone'           => $rprtng_row['phone'],
-                    'reporting_home_no'         => $rprtng_row['home_no'],
-                    'reporting_email'           => $rprtng_row['email'],
-                    'reporting_address1'        => $rprtng_row['address1'],
-                    'reporting_address2'        => $rprtng_row['address2'],
-                    'reporting_education'       => $rprtng_row['education'],
-                    'reporting_id_presented'    => $rprtng_row['id_presented'],
+                    'id'              => $rprtng_row['id'],
+                    'lastname'        => $rprtng_row['lastname'],
+                    'firstname'       => $rprtng_row['firstname'],
+                    'middlename'      => $rprtng_row['middlename'],
+                    'gender'          => $rprtng_row['gender'],
+                    'nickname'        => $rprtng_row['nickname'],
+                    'citizenship'     => $rprtng_row['citizenship'],
+                    'civil_status'    => $rprtng_row['civil_status'],
+                    'birthday'        => $rprtng_row['birthday'],
+                    'qualifier'       => $rprtng_row['qualifier'],
+                    'phone'           => $rprtng_row['phone'],
+                    'home_no'         => $rprtng_row['home_no'],
+                    'email'           => $rprtng_row['email'],
+                    'address1'        => $rprtng_row['address1'],
+                    'address2'        => $rprtng_row['address2'],
+                    'education'       => $rprtng_row['education'],
+                    'occupation'      => $rprtng_row['occupation'],
+                    'id_presented'    => $rprtng_row['id_presented'],
                 ]);
             }
 
@@ -217,25 +218,28 @@ class M_Blotter extends Model {
                 $suspect_name = $sspct_row['firstname'] . ' ' . $sspct_row['lastname'];
 
                 array_push($suspect_data, [
-                    'suspect_id'                => $sspct_row['id'],
-                    'suspect_lastname'          => $sspct_row['lastname'],
-                    'suspect_firstname'         => $sspct_row['firstname'],
-                    'suspect_middlename'        => $sspct_row['middlename'],
-                    'suspect_gender'            => $sspct_row['gender'],
-                    'suspect_nickname'          => $sspct_row['nickname'],
-                    'suspect_citizenship'       => $sspct_row['citizenship'],
-                    'suspect_birthday'          => $sspct_row['birthday'],
-                    'suspect_qualifier'         => $sspct_row['qualifier'],
-                    'suspect_phone'             => $sspct_row['phone'],
-                    'suspect_email'             => $sspct_row['email'],
-                    'suspect_address1'          => $sspct_row['address1'],
-                    'suspect_address2'          => $sspct_row['address2'],
-                    'suspect_education'         => $sspct_row['education'],
-                    'suspect_occupation'        => $sspct_row['occupation'],
-                    'suspect_id_presented'      => $sspct_row['id_presented'],
-                    'suspect_id_height'         => $sspct_row['height'],
-                    'suspect_eyes_color'        => $sspct_row['eyes_color'],
-                    'suspect_influence_of'      => $sspct_row['influence_of'],
+                    'id'                => $sspct_row['id'],
+                    'lastname'          => $sspct_row['lastname'],
+                    'firstname'         => $sspct_row['firstname'],
+                    'middlename'        => $sspct_row['middlename'],
+                    'gender'            => $sspct_row['gender'],
+                    'nickname'          => $sspct_row['nickname'],
+                    'citizenship'       => $sspct_row['citizenship'],
+                    'birthday'          => $sspct_row['birthday'],
+                    'qualifier'         => $sspct_row['qualifier'],
+                    'phone'             => $sspct_row['phone'],
+                    'email'             => $sspct_row['email'],
+                    'civil_status'      => $sspct_row['civil_status'],
+                    'address1'          => $sspct_row['address1'],
+                    'address2'          => $sspct_row['address2'],
+                    'education'         => $sspct_row['education'],
+                    'occupation'        => $sspct_row['occupation'],
+                    'id_presented'      => $sspct_row['id_presented'],
+                    'height'            => $sspct_row['height'],
+                    'weight'            => $sspct_row['weight'],
+                    'eyes_color'        => $sspct_row['eyes_color'],
+                    'hair_color'        => $sspct_row['hair_color'],
+                    'influence_of'      => $sspct_row['influence_of'],
                 ]);
             }
 
@@ -247,21 +251,36 @@ class M_Blotter extends Model {
                 $victim_name = $vctm_row['firstname'] . ' ' . $vctm_row['lastname'];
 
                 array_push($victim_data, [
-                    'victim_id'                 => $vctm_row['id'],
-                    'victim_lastname'           => $vctm_row['lastname'],
-                    'victim_firstname'          => $vctm_row['firstname'],
-                    'victim_middlename'         => $vctm_row['middlename'],
-                    'victim_gender'             => $vctm_row['gender'],
-                    'victim_nickname'           => $vctm_row['nickname'],
-                    'victim_citizenship'        => $vctm_row['citizenship'],
-                    'victim_phone'              => $vctm_row['phone'],
-                    'victim_home_no'            => $vctm_row['home_no'],
-                    'victim_email'              => $vctm_row['email'],
-                    'victim_address1'           => $vctm_row['address1'],
-                    'victim_address2'           => $vctm_row['address2'],
-                    'victim_education'          => $vctm_row['education'],
-                    'victim_occupation'         => $vctm_row['occupation'],
-                    'victim_id_presented'       => $vctm_row['id_presented'],
+                    'id'                 => $vctm_row['id'],
+                    'lastname'           => $vctm_row['lastname'],
+                    'firstname'          => $vctm_row['firstname'],
+                    'middlename'         => $vctm_row['middlename'],
+                    'gender'             => $vctm_row['gender'],
+                    'nickname'           => $vctm_row['nickname'],
+                    'citizenship'        => $vctm_row['citizenship'],
+                    'civil_status'       => $vctm_row['civil_status'],
+                    'birthday'           => $vctm_row['birthday'],
+                    'phone'              => $vctm_row['phone'],
+                    'home_no'            => $vctm_row['home_no'],
+                    'email'              => $vctm_row['email'],
+                    'address1'           => $vctm_row['address1'],
+                    'address2'           => $vctm_row['address2'],
+                    'education'          => $vctm_row['education'],
+                    'occupation'         => $vctm_row['occupation'],
+                    'id_presented'       => $vctm_row['id_presented'],
+                ]);
+            }
+
+            $narration_data     = array();
+            $narration          = $this->db->query("SELECT * FROM narrations WHERE blotter_entry_no = :blotter_entry_no:", [
+                'blotter_entry_no' => $blotter_entry_no
+            ]);
+            foreach( $narration->getResult('array') as $nrrtn_row ) {
+                array_push($narration_data, [
+                    'id'                => $nrrtn_row['id'],
+                    'incident_type'     => $nrrtn_row['incident_type'],
+                    'incident_place'    => $nrrtn_row['incident_place'],
+                    'narration'         => $nrrtn_row['narration']
                 ]);
             }
 
@@ -269,13 +288,14 @@ class M_Blotter extends Model {
                 'blotter_id'            => $blttr_row['id'],
                 'blotter_entry_no'      => $blttr_row['blotter_entry_no'],
                 'blotter_date'          => $blttr_row['date_saved'],
-                'reporting_person'      => $reporting_person,
+                'reporting_person'      => $reporting_data,
                 'suspect'               => $suspect_data,
                 'victim'                => $victim_data,
+                'narration'             => $narration_data,
                 'reporting_name'        => $reporting_name,
                 'suspect_name'          => $suspect_name,
                 'victim_name'           => $victim_name,
-                'action'                => ''
+                'action'                => '<button type="button" class="btn btn-light btn-sm" id="show-more-btn">More <i class="fa fa-search"></i></button>'
             ]);
         }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 11:21 AM
+-- Generation Time: Jul 10, 2021 at 01:14 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -117,6 +117,7 @@ CREATE TABLE `suspects` (
   `gender` varchar(10) NOT NULL,
   `nickname` varchar(50) NOT NULL,
   `citizenship` varchar(20) NOT NULL,
+  `civil_status` varchar(200) NOT NULL,
   `birthday` date NOT NULL,
   `qualifier` varchar(50) NOT NULL,
   `phone` varchar(11) NOT NULL,
