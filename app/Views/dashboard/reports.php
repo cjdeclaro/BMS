@@ -19,3 +19,30 @@
             <!-- ============================================================== -->
             <!-- End Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
+
+            <div class="container-fluid">
+
+                <div class="card">
+                    <div class="card-body">
+                        <table id="reports-table" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Blotter #</th>
+                                    <th class="text-center">Reporting Person</th>
+                                    <th class="text-center">Name of Suspect</th>
+                                    <th class="text-center">Name of Victim</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center" colspan="5">
+                                        <i class="fa fa-spin fa-spinner"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>

@@ -474,6 +474,7 @@ class Blotter extends ResourceController {
 
             $this->m_blotter->add_blotter($blotter_data);
             $this->m_blotter->add_reporting_person($reporting_data);
+            $this->m_blotter->add_victim($victim_data);
             
             if( $if_police_personnel !== null || $if_w_previous_crim_record !== null ) {
                 $suspect_id                         = $this->add_suspect_return_id($suspect_data);
@@ -507,6 +508,12 @@ class Blotter extends ResourceController {
         } else {
             return $this->fail($this->validation->getErrors(), 404);
         }
+    }
+
+    public function get_all() {
+        return json_encode([
+            'data'  => $this->m_blotter->get_all()
+        ]);
     }
 
 }

@@ -29,9 +29,9 @@ class Dashboard extends BaseController {
 
     public function reports() {
         $data = [
-            'title'     => 'Reporting Person',
+            'title'     => 'Reports',
             'content'   => 'dashboard/reports',
-            'scripts'   => ''
+            'scripts'   => 'js/reports.js'
         ];
 
         return view('main_template', $data);

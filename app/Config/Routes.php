@@ -44,6 +44,7 @@ $routes->group('api', function($routes) {
 	$routes->group('blotter', function($routes) {
 		$routes->resource('blotter');
 		$routes->post('add', 'Blotter::add');
+		$routes->get('get-all', 'Blotter::get_all');
 	});
 
 	$routes->group('login', function($routes) {
