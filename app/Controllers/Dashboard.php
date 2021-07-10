@@ -27,46 +27,21 @@ class Dashboard extends BaseController {
         return view('main_template', $data);
     }
 
-    public function reporting_person() {
-        $data = [
-            'title'     => 'Reporting Person',
-            'content'   => 'dashboard/reporting_person'
-        ];
-
-        return view('main_template', $data);
-    }
-
-    public function suspect_data() {
-        $data = [
-            'title'     => 'Reporting Person',
-            'content'   => 'dashboard/suspect_data'
-        ];
-
-        return view('main_template', $data);
-    }
-
-    public function victim_data() {
-        $data = [
-            'title'     => 'Reporting Person',
-            'content'   => 'dashboard/victim_data'
-        ];
-
-        return view('main_template', $data);
-    }
-
-    public function narrative_of_incidents() {
-        $data = [
-            'title'     => 'Reporting Person',
-            'content'   => 'dashboard/narrative_of_incidents'
-        ];
-
-        return view('main_template', $data);
-    }
-
     public function reports() {
         $data = [
             'title'     => 'Reporting Person',
-            'content'   => 'dashboard/reports'
+            'content'   => 'dashboard/reports',
+            'scripts'   => ''
+        ];
+
+        return view('main_template', $data);
+    }
+
+    public function users() {
+        $data = [
+            'title'     => 'Users',
+            'content'   => 'dashboard/users',
+            'scripts'    => 'js/users.js'
         ];
 
         return view('main_template', $data);

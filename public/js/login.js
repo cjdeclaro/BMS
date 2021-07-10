@@ -5,7 +5,7 @@ $(document).on('submit', '#loginform', function(e){
     var password = $('input[name="password"]');
 
     $.ajax({
-        url: base_url + '/api/login/submit',
+        url: 'api/login/submit',
         headers: {'X-Requested-With': 'XMLHttpRequest'},
         type: 'POST',
         data: $(this).serialize(),
@@ -24,11 +24,16 @@ $(document).on('submit', '#loginform', function(e){
 
                 fieldValidation(username, messages.username);
                 fieldValidation(password, messages.password);
+
+                if(messages.error) {
+                    $('<div class="alert alert-danger">'+ messages.error +'</div>').insertBefore('#loginform');
+                }
             }
             
         },
         beforeSend: function() {
-
+            $('.alert').remove();
+            $('.invalid-feedback').remove();
         },
         complete: function() {
 

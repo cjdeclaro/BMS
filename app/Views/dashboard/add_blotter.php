@@ -290,7 +290,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row" id="police-personnel-data" style="display: none">
+                                                            <div class="row" id="police-personnel-data">
                                                                 <div class="col-3">
                                                                     <input type="text" name="rank" class="form-control" placeholder="Rank">
                                                                 </div>
@@ -311,7 +311,7 @@
                                                                 </div>                                                            
                                                             </div>
                                                         </div>
-                                                        <div class="row" id="previous-case-data" style="display: none">
+                                                        <div class="row" id="previous-case-data">
                                                             <div class="col-md-12">
                                                                 <input type="text" name="prev-case-status" class="form-control" placeholder="Status of Previous Case">
                                                             </div>

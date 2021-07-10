@@ -79,7 +79,9 @@ class LoginAction extends ResourceController {
 
     public function logout() {
         $this->session->destroy();
-        return $this->respondCreated(array('success' => 'You have been logged out.'));
+        return $this->respondCreated([
+            'message' => 'You have been logged out.'
+        ]);
     }
 
 }

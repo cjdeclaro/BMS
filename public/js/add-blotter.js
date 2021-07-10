@@ -145,7 +145,7 @@ $(document).on('submit', '#msform', function(e) {
     formData.push({ name: "narration", value:  contentStr});
 
     $.ajax({
-        url: base_url + '/api/blotter/add',
+        url: 'api/blotter/add',
         headers: {'X-Requested-With': 'XMLHttpRequest'},
         type: 'POST',
         data: formData,

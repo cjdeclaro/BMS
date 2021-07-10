@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/custom/images/favicon.png') ?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/custom/images/favicon.png">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="assets/sweetalert/sweetalert2.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="assets/datatables/datatables.min.css">
     <!-- Custom CSS -->
-    <link href="<?= base_url('assets/monster-admin/plugins/chartist/dist/chartist.min.css') ?>" rel="stylesheet">
+    <link href="assets/monster-admin/plugins/chartist/dist/chartist.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="<?= base_url('assets/custom/css/style.min.css') ?>" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url('assets/custom/css/custom.css') ?>">
+    <link href="assets/custom/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/custom/css/custom.css">
 
     <?php
 
@@ -60,17 +64,17 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script>var base_url = '<?= base_url() ?>';</script>
-    <script src="<?= base_url('assets/monster-admin/plugins/jquery/dist/jquery.min.js') ?>"></script>
+    
+    <script src="assets/monster-admin/plugins/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?= base_url('assets/monster-admin/plugins/bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
-    <script src="<?= base_url('assets/custom/js/app-style-switcher.js') ?>"></script>
+    <script src="assets/monster-admin/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/custom/js/app-style-switcher.js"></script>
     <!--Wave Effects -->
-    <script src="<?= base_url('assets/custom/js/waves.js') ?>"></script>
+    <script src="assets/custom/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="<?= base_url('assets/custom/js/sidebarmenu.js') ?>"></script>
+    <script src="assets/custom/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="<?= base_url('assets/custom/js/custom.js') ?>"></script>
+    <script src="assets/custom/js/custom.js"></script>
     <!-- page script -->
 
     <?php
@@ -86,9 +90,12 @@
     <script src="<?= base_url($scripts) ?>"></script>
     <!--This page JavaScript -->
     <!--flot chart-->
-    <script src="<?= base_url('assets/monster-admin/plugins/flot/jquery.flot.js') ?>"></script>
-    <script src="<?= base_url('assets/monster-admin/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js') ?>"></script>
-    <script src="<?= base_url('assets/custom/js/pages/dashboards/dashboard1.js') ?>"></script>
+    <script src="assets/monster-admin/plugins/flot/jquery.flot.js"></script>
+    <script src="assets/monster-admin/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="assets/custom/js/pages/dashboards/dashboard1.js"></script>
+    <script src="assets/sweetalert/sweetalert2.js"></script>
+    <script src="assets/datatables/datatables.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

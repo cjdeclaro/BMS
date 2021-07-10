@@ -36,6 +36,7 @@ $routes->get('/', 'Dashboard::index');
 $routes->get('reports', 'Dashboard::reports');
 $routes->get('login', 'Login::index');
 $routes->get('add-blotter', 'Dashboard::add_blotter');
+$routes->get('users', 'Dashboard::users');
 
 // APIs
 $routes->group('api', function($routes) {
@@ -48,7 +49,14 @@ $routes->group('api', function($routes) {
 	$routes->group('login', function($routes) {
 		$routes->resource('login');
 		$routes->post('submit', 'LoginAction::login');
-		$routes->get('destroy-session', 'LoginAction::logout');
+		$routes->get('logout', 'LoginAction::logout');
+	});
+
+	$routes->group('users', function($routes) {
+		$routes->resource('users');
+		$routes->get('get-all', 'Users::get_all');
+		$routes->post('add-new', 'Users::add_new');
+		$routes->post('edit', 'Users::edit_user');
 	});
 
 });

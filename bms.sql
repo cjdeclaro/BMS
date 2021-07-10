@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2021 at 02:50 PM
+-- Generation Time: Jul 10, 2021 at 01:22 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -153,6 +153,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `lastname`, `firstname`, `middlename`, `address`, `email`, `phone`, `role`) VALUES
+(1, 'Administrator', 'password', 'Lumagui', 'Harley', 'Ferrer', 'Labasan, Bongabong, Oriental Mindoro', 'lumagui.harl0723@gmail.com', '09156309799', 'Administrator');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -191,6 +198,16 @@ ALTER TABLE `reporting_persons`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

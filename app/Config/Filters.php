@@ -62,7 +62,7 @@ class Filters extends BaseConfig
 	 */
 	public $filters = [
 		'auth' => [
-			'before' => ['/', 'add-blotter/']
+			'before' => ['/', 'add-blotter/', 'users/', 'reports/']
 		],
 		'login'	=> [
 			'before' => ['login/']

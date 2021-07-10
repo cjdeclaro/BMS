@@ -8,7 +8,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="<?= base_url() ?>">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                                 </ol>
                             </nav>
@@ -27,7 +27,7 @@
                     <div class="col-sm-12 col-md-3 col-lg-3">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Pending Cases</h4>
+                                <h4 class="card-title">Total Cases</h4>
                                 <div class="text-end">
                                     <h2 class="font-light mb-0">
                                         <i class="ti-arrow-up text-success"></i> 0

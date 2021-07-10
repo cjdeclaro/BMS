@@ -19,13 +19,22 @@
                                 <span class="hide-menu">Blotter</span>
                             </a>
                             <ul aria-expanded="false" class="collapse first-level">
-                                <li class="sidebar-item"><a href="<?= base_url('add-blotter') ?>" class="sidebar-link" style="padding-left: 20px"><i class="fa fa-plus"></i><span class="hide-menu"> Add New </span></a></li>
-                                <li class="sidebar-item"><a href="<?= base_url('blotter-records') ?>" class="sidebar-link" style="padding-left: 20px"><i class="fa fa-list"></i><span class="hide-menu"> View All </span></a></li>
+                                <li class="sidebar-item"><a href="add-blotter" class="sidebar-link" style="padding-left: 20px"><i class="fa fa-plus"></i><span class="hide-menu"> Add New </span></a></li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> 
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= base_url('reports') ?>" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="users" aria-expanded="false">
+                                <i class="me-3 fa fa-users" aria-hidden="true"></i><span class="hide-menu">Users</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reports" aria-expanded="false">
                                 <i class="me-3 fa fa-info-circle" aria-hidden="true"></i><span class="hide-menu">Reports</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#logout" id="logout-btn" aria-expanded="false">
+                                <i class="me-3 fa fa-sign-out-alt" aria-hidden="true"></i><span class="hide-menu">Logout</span>
                             </a>
                         </li>
                     </ul>
