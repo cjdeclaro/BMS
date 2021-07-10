@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 06:19 AM
+-- Generation Time: Jul 10, 2021 at 11:17 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `blotters` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `blotter_entry_no` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL,
   `date_saved` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -152,6 +153,33 @@ CREATE TABLE `users` (
   `role` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `victims`
+--
+
+CREATE TABLE `victims` (
+  `id` int(11) NOT NULL,
+  `blotter_entry_no` varchar(50) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `middlename` varchar(255) NOT NULL,
+  `gender` varchar(25) NOT NULL,
+  `nickname` varchar(50) NOT NULL,
+  `citizenship` varchar(50) NOT NULL,
+  `civil_status` varchar(100) NOT NULL,
+  `birthday` date NOT NULL,
+  `phone` varchar(25) NOT NULL,
+  `home_no` varchar(25) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `address1` text NOT NULL,
+  `address2` text NOT NULL,
+  `education` int(11) NOT NULL,
+  `occupation` int(11) NOT NULL,
+  `id_presented` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -199,6 +227,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `victims`
+--
+ALTER TABLE `victims`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -242,6 +276,12 @@ ALTER TABLE `suspects`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `victims`
+--
+ALTER TABLE `victims`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
