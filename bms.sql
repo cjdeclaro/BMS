@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 11:17 AM
+-- Generation Time: Jul 10, 2021 at 11:21 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -175,9 +175,9 @@ CREATE TABLE `victims` (
   `email` varchar(100) NOT NULL,
   `address1` text NOT NULL,
   `address2` text NOT NULL,
-  `education` int(11) NOT NULL,
-  `occupation` int(11) NOT NULL,
-  `id_presented` int(11) NOT NULL
+  `education` varchar(255) NOT NULL,
+  `occupation` varchar(100) NOT NULL,
+  `id_presented` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
