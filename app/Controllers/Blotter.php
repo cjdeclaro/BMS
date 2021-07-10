@@ -8,6 +8,7 @@ class Blotter extends ResourceController {
     protected $validation;
     protected $request;
     protected $session;
+    protected $m_blotter;
     public function __construct() {
         // Libraries / Helpers
         $this->validation   = \Config\Services::validation();
@@ -15,18 +16,35 @@ class Blotter extends ResourceController {
         $this->session      = \Config\Services::session();
         
         helper(['form', 'url']);
+
+        // Model(s)
+        $this->m_blotter    = new \App\Models\M_Blotter();
     }
 
     public function add() {
-        $reporting_data = $this->request->getPost('reporting');
-        $suspect_data   = $this->request->getPost('suspect');
-        $victim         = $this->request->getPost('victim');
+        $reporting_data     = $this->request->getPost('reporting');
+        $suspect_data       = $this->request->getPost('suspect');
+        $victim_data        = $this->request->getPost('victim');
+        $blotter_entry_no   = $this->request->getPost('blotter_entry_no');
+        $narration_data     = [
+            'blotter_entry_no'  => $blotter_entry_no,
+            'incident_type'     => $this->request->getPost('incident-type'),
+            'incident_place'    => $this->request->getPost('incident-place'),
+            'narration'         => $this->request->getPost('narration')
+        ];
+        $blotter_data       = [
+            'blotter_entry_no'  => $blotter_entry_no,
+            'user_id'           => $this->session->get('sess_uid')
+        ];
+        $if_police_personnel        = $this->request->getPost('if-police-personnel');
+        $if_w_previous_crim_record  = $this->request->getPost('if-w-previous-crim-record');
+        
 
         // validation rules
         $this->validation->withRequest($this->request)->setRules([
 
             // Blotter #
-            'blotter_no' => [
+            'blotter_entry_no' => [
                 'label' => 'Blotter Number',
                 'rules' => 'required',
                 'error' => [
@@ -51,6 +69,13 @@ class Blotter extends ResourceController {
             ],
             'reporting.middlename'   => [
                 'label' => 'Middle Name',
+                'rules' => 'required',
+                'error' => [
+                    'required'      => '{field} is required.'
+                ]
+            ],
+            'reporting.gender'   => [
+                'label' => 'Gender',
                 'rules' => 'required',
                 'error' => [
                     'required'      => '{field} is required.'
@@ -84,6 +109,13 @@ class Blotter extends ResourceController {
                     'required'      => '{field} is required.'
                 ]
             ],
+            'reporting.qualifier'   => [
+                'label' => 'Qualifier',
+                'rules' => 'required',
+                'error' => [
+                    'required'      => '{field} is required.'
+                ]
+            ],
             'reporting.phone'   => [
                 'label' => 'Phone Number',
                 'rules' => 'required',
@@ -100,9 +132,10 @@ class Blotter extends ResourceController {
             ],
             'reporting.email'   => [
                 'label' => 'Email',
-                'rules' => 'required',
+                'rules' => 'required|valid_email',
                 'error' => [
-                    'required'      => '{field} is required.'
+                    'required'      => '{field} is required.',
+                    'valid_email'   => '{field} is an invalid email.'
                 ]
             ],
             'reporting.address-1'   => [
@@ -191,11 +224,40 @@ class Blotter extends ResourceController {
                     'required'      => '{field} is required.'
                 ]
             ],
+            'suspect.birthday'   => [
+                'label' => 'Birthday',
+                'rules' => 'required',
+                'error' => [
+                    'required'      => '{field} is required.'
+                ]
+            ],
             'suspect.qualifier'   => [
                 'label' => 'Qualifer',
                 'rules' => 'required',
                 'error' => [
                     'required'      => '{field} is required.'
+                ]
+            ],
+            'suspect.phone'   => [
+                'label' => 'Phone Number',
+                'rules' => 'required',
+                'error' => [
+                    'required'      => '{field} is required.'
+                ]
+            ],
+            'suspect.home-no'   => [
+                'label' => 'Home Number',
+                'rules' => 'required',
+                'error' => [
+                    'required'      => '{field} is required.'
+                ]
+            ],
+            'suspect.email'   => [
+                'label' => 'Email',
+                'rules' => 'required|valid_email',
+                'error' => [
+                    'required'      => '{field} is required.',
+                    'valid_email'   => '{field} is an invalid email.'
                 ]
             ],
             'suspect.address-1'   => [
@@ -342,9 +404,10 @@ class Blotter extends ResourceController {
             ],
             'victim.email'   => [
                 'label' => 'Email',
-                'rules' => 'required',
+                'rules' => 'required|valid_email',
                 'error' => [
-                    'required'      => '{field} is required.'
+                    'required'      => '{field} is required.',
+                    'valid_email'   => '{filed} is an invalid email.'
                 ]
             ],
             'victim.address-1'   => [
@@ -409,6 +472,38 @@ class Blotter extends ResourceController {
 
         if($this->validation->withRequest($this->request)->run()) {
 
+            $this->m_blotter->add_blotter($blotter_data);
+            $this->m_blotter->add_reporting_person($reporting_data);
+            
+            if( $if_police_personnel !== null || $if_w_previous_crim_record !== null ) {
+                $suspect_id                         = $this->add_suspect_return_id($suspect_data);
+                $if_police_personnel_DATA           = [
+                    'suspect_id'        => $suspect_id,
+                    'rank'              => $this->request->getPost('rank'),
+                    'unit_assignment'   => $this->request->getPost('unit-assignment')
+                ];
+                $if_w_previous_crim_record_DATA     = [
+                    'suspect_id'        => $suspect_id,
+                    'status'            => $this->request->getPost('prev-case-status')
+                ];
+
+                if( $if_police_personnel !== null ) {
+                    $this->m_blotter->add_police_personnel($if_police_personnel_DATA);
+                }
+
+                if( $if_w_previous_crim_record !== null ) {
+                    $this->m_blotter->add_criminal_records();
+                }
+
+            } else {
+                $this->m_blotter->add_suspect($suspect_data);
+            }
+
+            $this->m_blotter->add_narration($narration_data);
+
+            return $this->respondCreated([
+                'message'    => 'Blotter Added Successfully!'
+            ]);
         } else {
             return $this->fail($this->validation->getErrors(), 404);
         }

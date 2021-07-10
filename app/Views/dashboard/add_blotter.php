@@ -39,39 +39,49 @@
                                             </ul> <!-- fieldsets -->
                                             <fieldset>
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Last Name:</label>
                                                             <input type="text" name="reporting[lastname]" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
+                                                    <div class="col-3">
                                                         <div class="form-group">
                                                             <label>First Name:</label>
                                                             <input type="text" name="reporting[firstname]" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
+                                                    <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Middle Name:</label>
                                                             <input type="text" name="reporting[middlename]" class="form-control">
                                                         </div>
                                                     </div>
+                                                    <div class="col-3">
+                                                        <div class="form-group">
+                                                            <label>Gender:</label>
+                                                            <select name="reporting[gender]" class="form-control">
+                                                                <option value="">-- select --</option>
+                                                                <option value="Male">Male</option>
+                                                                <option value="Female">Female</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Nick Name:</label>
                                                             <input type="text" name="reporting[nickname]" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Citizenship:</label>
                                                             <input type="text" name="reporting[citizenship]" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Civil Status:</label>
                                                             <select name="reporting[civil_status]" class="form-control">
@@ -83,10 +93,16 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Birthday:</label>
                                                             <input type="date" name="reporting[birthday]" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="form-group">
+                                                            <label>Qualifier:</label>
+                                                            <input type="text" name="reporting[qualifier]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -144,7 +160,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                <input type="hidden" name="reporting[blotter_entry_no]" value="<?= $blotter_no ?>">
                                                 <input type="button" name="next" class="next action-button" value="Next Step" />
                                             </fieldset>
                                             <fieldset>
@@ -180,19 +196,19 @@
                                                         </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Nick Name:</label>
                                                             <input type="text" name="suspect[nickname]" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Citizenship:</label>
                                                             <input type="text" name="suspect[citizenship]" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Civil Status:</label>
                                                             <select name="suspect[civil_status]" class="form-control">
@@ -204,10 +220,36 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-3">
+                                                    <div class="col-2">
+                                                        <div class="form-group">
+                                                            <label>Birthday:</label>
+                                                            <input type="date" name="suspect[birthday]" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
                                                         <div class="form-group">
                                                             <label>Qualifier:</label>
                                                             <input type="text" name="suspect[qualifier]" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Phone Number:</label>
+                                                            <input type="text" name="suspect[phone]" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Home Number:</label>
+                                                            <input type="text" name="suspect[home-no]" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="form-group">
+                                                            <label>Email Address:</label>
+                                                            <input type="email" name="suspect[email]" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -283,14 +325,14 @@
                                                             <div class="row">
                                                                 <div class="col-4">
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="checkbox" value="" id="if-police-personnel">
+                                                                        <input class="form-check-input" type="checkbox" name="if-police-personnel" value="" id="if-police-personnel">
                                                                         <label class="form-check-label" for="if-police-personnel">
                                                                             If AFP/PNP Personnel
                                                                         </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row" id="police-personnel-data">
+                                                            <div class="row" id="police-personnel-data" style="display: none">
                                                                 <div class="col-3">
                                                                     <input type="text" name="rank" class="form-control" placeholder="Rank">
                                                                 </div>
@@ -304,14 +346,14 @@
                                                         <div class="row">
                                                             <div class="col-9">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                                    <label class="form-check-label" for="defaultCheck1">
+                                                                    <input class="form-check-input" name="if-w-previous-crim-record" type="checkbox" value="" id="if-w-previous-crim-record">
+                                                                    <label class="form-check-label" for="if-w-previous-crim-record">
                                                                         If with Previous Criminal Records
                                                                     </label>
                                                                 </div>                                                            
                                                             </div>
                                                         </div>
-                                                        <div class="row" id="previous-case-data">
+                                                        <div class="row" id="previous-case-data" style="display: none">
                                                             <div class="col-md-12">
                                                                 <input type="text" name="prev-case-status" class="form-control" placeholder="Status of Previous Case">
                                                             </div>
@@ -319,6 +361,7 @@
                                                     </div>
                                                 </div>
 
+                                                <input type="hidden" name="suspect[blotter_entry_no]" value="<?= $blotter_no ?>">
                                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 <input type="button" name="next" class="next action-button" value="Next Step" />
                                             </fieldset>
@@ -441,6 +484,7 @@
                                                     </div>
                                                 </div>
 
+                                                <input type="hidden" name="victim[blotter_entry_no]" value="<?= $blotter_no ?>">
                                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 <input type="button" name="next" class="next action-button" value="Next Step" />
                                             </fieldset>
@@ -466,7 +510,7 @@
                                                     </div>
                                                 </div>
                                                 
-                                                <input type="hidden" name="blotter_no" value="<?= $blotter_no ?>">
+                                                <input type="hidden" name="blotter_entry_no" value="<?= $blotter_no ?>">
                                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                                 <button type="submit" class="action-button">Submit</button>
                                             </fieldset>

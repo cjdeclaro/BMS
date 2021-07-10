@@ -74,15 +74,19 @@ $(function() {
 $(document).on('submit', '#msform', function(e) {
     e.preventDefault();
 
+    var that = this;
+
     // Elements
         // Reporting Person Elements
             var rprtng_lname            = $('input[name="reporting[lastname]"]');
             var rprtng_fname            = $('input[name="reporting[firstname]"]');
             var rprtng_mname            = $('input[name="reporting[middlename]"]');
+            var rprtng_gender           = $('select[name="reporting[gender]"]');
             var rprtng_nickname         = $('input[name="reporting[nickname]"]');
             var rprtng_citizenship      = $('input[name="reporting[citizenship]"]');
             var rprtng_civil_status     = $('select[name="reporting[civil_status]"]');
             var rprtng_birthday         = $('input[name="reporting[birthday]"]');
+            var rprtng_qualifier        = $('input[name="reporting[qualifier]"]');
             var rprtng_phone            = $('input[name="reporting[phone]"]');
             var rprtng_home_no          = $('input[name="reporting[home-no]"]');
             var rprtng_email            = $('input[name="reporting[email]"]');
@@ -100,7 +104,11 @@ $(document).on('submit', '#msform', function(e) {
             var suspct_nickname         = $('input[name="suspect[nickname]"]');
             var suspct_citizenship      = $('input[name="suspect[citizenship]"]');
             var suspct_civil_status     = $('select[name="suspect[civil_status]"]');
+            var suspct_birthday         = $('input[name="suspect[birthday]"]');
             var suspct_qualifier        = $('input[name="suspect[qualifier]"]');
+            var suspct_phone            = $('input[name="suspect[phone]"]');
+            var suspct_home_no          = $('input[name="suspect[home-no]"]');
+            var suspct_email            = $('input[name="suspect[email]"]');
             var suspct_address_1        = $('textarea[name="suspect[address-1]"]');
             var suspct_address_2        = $('textarea[name="suspect[address-2]"]');
             var suspct_education        = $('input[name="suspect[education]"]');
@@ -151,7 +159,16 @@ $(document).on('submit', '#msform', function(e) {
         data: formData,
         dataType: 'JSON',
         success: function(data) {
-            console.log(data);
+            $(that)[0].reset();
+            Swal.fire(
+                'Success',
+                data.message,
+                'success'
+            );
+
+            setTimeout(() => {
+                window.location.href = 'reports';
+            }, 2000);
         },
         error: function(data) {
             var data = data.responseJSON;
@@ -163,10 +180,12 @@ $(document).on('submit', '#msform', function(e) {
                 fieldValidation(rprtng_lname, messages["reporting.lastname"]);
                 fieldValidation(rprtng_fname, messages["reporting.firstname"]);
                 fieldValidation(rprtng_mname, messages["reporting.middlename"]);
+                fieldValidation(rprtng_gender, messages["reporting.gender"]);
                 fieldValidation(rprtng_nickname, messages["reporting.nickname"]);
                 fieldValidation(rprtng_citizenship, messages["reporting.citizenship"]);
                 fieldValidation(rprtng_civil_status, messages["reporting.civil_status"]);
                 fieldValidation(rprtng_birthday, messages["reporting.birthday"]);
+                fieldValidation(rprtng_qualifier, messages["reporting.qualifier"]);
                 fieldValidation(rprtng_phone, messages["reporting.phone"]);
                 fieldValidation(rprtng_home_no, messages["reporting.home-no"]);
                 fieldValidation(rprtng_email, messages["reporting.email"]);
@@ -184,7 +203,11 @@ $(document).on('submit', '#msform', function(e) {
                 fieldValidation(suspct_nickname, messages["suspect.nickname"]);
                 fieldValidation(suspct_citizenship, messages["suspect.citizenship"]);
                 fieldValidation(suspct_civil_status, messages["suspect.civil_status"]);
+                fieldValidation(suspct_birthday, messages["suspect.birthday"]);
                 fieldValidation(suspct_qualifier, messages["suspect.qualifier"]);
+                fieldValidation(suspct_phone, messages["suspect.phone"]);
+                fieldValidation(suspct_home_no, messages["suspect.home-no"]);
+                fieldValidation(suspct_email, messages["suspect.email"]);
                 fieldValidation(suspct_address_1, messages["suspect.address-1"]);
                 fieldValidation(suspct_address_2, messages["suspect.address-2"]);
                 fieldValidation(suspct_education, messages["suspect.education"]);
@@ -222,6 +245,7 @@ $(document).on('submit', '#msform', function(e) {
         },
         beforeSend: function() {
             $('.invalid-feedback').remove();
+            $('.form-control').removeClass('is-invalid');
         },
         complete: function() {
 
@@ -246,4 +270,26 @@ function fieldValidation(fieldElement, message) {
         fieldElement.removeClass('is-invalid');
     }
 }
+
+$(function() {
+
+    // IF Police Personnel
+    $('#if-police-personnel').click(function() {
+        if( $(this).prop('checked') == true ) {
+            $('#police-personnel-data').show();
+        } else {
+            $('#police-personnel-data').hide();
+        }
+    });
+
+    // If Has Previous Criminal Record
+    $('#if-w-previous-crim-record').click(function() {
+        if( $(this).prop('checked') == true ) {
+            $('#previous-case-data').show();
+        } else {
+            $('#previous-case-data').hide();
+        }
+    });
+
+});
 

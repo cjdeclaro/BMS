@@ -105,7 +105,7 @@
                                             </select>
                                         </div>
                                         <div class="d-grid">
-                                            <button type="submit" class="btn btn-primary btn-sm">Add</button>
+                                            <button type="submit" class="btn btn-success btn-sm text-white">Add</button>
                                         </div>
                                     </form>
                                 </div>
@@ -162,7 +162,7 @@
                                         </div>
                                         <div class="d-grid">
                                             <input type="hidden" name="id">
-                                            <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                                            <button type="submit" class="btn btn-success btn-sm text-white">Edit</button>
                                         </div>
                                     </form>
                                 </div>

@@ -13,12 +13,11 @@ class M_Blotter extends Model {
     }
 
     public function add_blotter($data) {
-        $query  = "INSERT INTO blotters (user_id, blotter_entry_no, status) "
-                . "VALUES (:user_id:, :blotter_entry_no:, :status:)";
+        $query  = "INSERT INTO blotters (user_id, blotter_entry_no) "
+                . "VALUES (:user_id:, :blotter_entry_no:)";
         return $this->db->query($query, [
             'user_id'           => $data['user_id'],
-            'blotter_entry_no'  => $data['blotter_entry_no'],
-            'status'            => $data['status']
+            'blotter_entry_no'  => $data['blotter_entry_no']
         ]);
     }
 
@@ -27,7 +26,7 @@ class M_Blotter extends Model {
                 . "blotter_entry_no, lastname, firstname, middlename, gender, nickname, citizenship, civil_status, birthday, qualifier, phone, "
                 . "home_no, email, address1, address2, education, occupation, id_presented) "
                 . "VALUES ("
-                . ":blotter_entry_no:, :lastname:, :firstname:, :middlename:, :gender:, :nickname:, :citizenship:, :civil_status:, :birthday:, :qualifier:, :phone:"
+                . ":blotter_entry_no:, :lastname:, :firstname:, :middlename:, :gender:, :nickname:, :citizenship:, :civil_status:, :birthday:, :qualifier:, :phone:, "
                 . ":home_no:, :email:, :address1:, :address2:, :education:, :occupation:, :id_presented:)";
         return $this->db->query($query, [
             'blotter_entry_no'  => $data['blotter_entry_no'],
@@ -41,13 +40,13 @@ class M_Blotter extends Model {
             'birthday'          => $data['birthday'],
             'qualifier'         => $data['qualifier'],
             'phone'             => $data['phone'],
-            'home_no'           => $data['home_no'],
+            'home_no'           => $data['home-no'],
             'email'             => $data['email'],
-            'address1'          => $data['address1'],
-            'address2'          => $data['address2'],
+            'address1'          => $data['address-1'],
+            'address2'          => $data['address-2'],
             'education'         => $data['education'],
             'occupation'        => $data['occupation'],
-            'id_presented'      => $data['id_presented']
+            'id_presented'      => $data['id-presented']
         ]);        
     }
 
@@ -71,6 +70,40 @@ class M_Blotter extends Model {
             'birthday'          => $data['birthday'],
             'qualifier'         => $data['qualifier'],
             'phone'             => $data['phone'],
+            'home_no'           => $data['home-no'],
+            'email'             => $data['email'],
+            'address1'          => $data['address-1'],
+            'address2'          => $data['address-2'],
+            'education'         => $data['education'],
+            'occupation'        => $data['occupation'],
+            'id_presented'      => $data['id-presented'],
+            'height'            => $data['height'],
+            'weight'            => $data['weight'],
+            'eyes_color'        => $data['eyes-color'],
+            'hair_color'        => $data['hair-color'],
+            'influence_of'      => $data['influence-of']
+        ]);
+    }
+
+    public function add_suspect_return_id() {
+        $query  = "INSERT INTO suspects ("
+                . "blotter_entry_no, lastname, firstname, middlename, gender, nickname, citizenship, birthday, qualifier, phone, home_no, email, "
+                . "address1, address2, education, occupation, id_presented, height, weight, eyes_color, hair_color, influence_of"
+                . ") VALUES ("
+                . ":blotter_entry_no:, :lastname:, :firstname:, :middlename:, :gender:, :nickname:, :citizenship:, :birthday:, :qualifier:, :phone:, :home_no:, :email:, "
+                . ":address1:, :address2:, :education:, :occupation:, :id_presented:, :height:, :weight:, :eyes_color:, :hair_color:, :influence_of:"
+                . ")";
+        $this->db->query($query, [
+            'blotter_entry_no'  => $data['blotter_entry_no'],
+            'lastname'          => $data['lastname'],
+            'firstname'         => $data['firstname'],
+            'middlename'        => $data['middlename'],
+            'gender'            => $data['gender'],
+            'nickname'          => $data['nickname'],
+            'citizenship'       => $data['citizenship'],
+            'birthday'          => $data['birthday'],
+            'qualifier'         => $data['qualifier'],
+            'phone'             => $data['phone'],
             'home_no'           => $data['home_no'],
             'email'             => $data['email'],
             'address1'          => $data['address1'],
@@ -84,6 +117,7 @@ class M_Blotter extends Model {
             'hair_color'        => $data['hair_color'],
             'influence_of'      => $data['influence_of']
         ]);
+        return $this->db->insertID();
     }
 
     public function add_police_personnel($data) {
@@ -111,6 +145,14 @@ class M_Blotter extends Model {
             'incident_place'    => $data['incident_place'],
             'narration'         => $data['narration']
         ]);
+    }
+
+    public function get_all() {
+        $data = array();
+
+        $blotter = $this->db->query("SELECT * FROM ");
+
+        return $data;
     }
 
 
