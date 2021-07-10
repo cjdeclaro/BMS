@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 01:22 AM
+-- Generation Time: Jul 10, 2021 at 06:19 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -153,13 +153,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `password`, `lastname`, `firstname`, `middlename`, `address`, `email`, `phone`, `role`) VALUES
-(1, 'Administrator', 'password', 'Lumagui', 'Harley', 'Ferrer', 'Labasan, Bongabong, Oriental Mindoro', 'lumagui.harl0723@gmail.com', '09156309799', 'Administrator');
-
---
 -- Indexes for dumped tables
 --
 
@@ -194,6 +187,12 @@ ALTER TABLE `reporting_persons`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `suspects`
+--
+ALTER TABLE `suspects`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -204,10 +203,46 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `blotters`
+--
+ALTER TABLE `blotters`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `criminal_records`
+--
+ALTER TABLE `criminal_records`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `narrations`
+--
+ALTER TABLE `narrations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `police_personnels`
+--
+ALTER TABLE `police_personnels`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `reporting_persons`
+--
+ALTER TABLE `reporting_persons`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `suspects`
+--
+ALTER TABLE `suspects`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
