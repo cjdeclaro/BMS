@@ -31,6 +31,7 @@
                                     <th class="text-center">Reporting Person</th>
                                     <th class="text-center">Name of Suspect</th>
                                     <th class="text-center">Name of Victim</th>
+                                    <th class="text-center">Date Reported</th>
                                     <th></th>
                                 </tr>
                             </thead>

@@ -45,6 +45,7 @@ $routes->group('api', function($routes) {
 		$routes->resource('blotter');
 		$routes->post('add', 'Blotter::add');
 		$routes->get('get-all', 'Blotter::get_all');
+		$routes->post('download-blotter-receipt', 'Blotter::print_receipt');
 	});
 
 	$routes->group('login', function($routes) {

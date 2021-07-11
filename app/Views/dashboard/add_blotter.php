@@ -491,16 +491,28 @@
                                             <fieldset style="text-align: left">
                                                 
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Type of Incident:</label>
                                                             <input type="text" name="incident-type" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <div class="col-4">
+                                                    <div class="col-3">
                                                         <div class="form-group">
                                                             <label>Place of Incident:</label>
                                                             <input type="text" name="incident-place" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="form-group">
+                                                            <label>Date of Incident:</label>
+                                                            <input type="date" name="date-of-incident" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <div class="form-group">
+                                                            <label>Time of Incident:</label>
+                                                            <input type="time" name="time-of-incident" class="form-control">
                                                         </div>
                                                     </div>
                                                 </div>

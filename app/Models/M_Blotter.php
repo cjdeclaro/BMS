@@ -162,12 +162,14 @@ class M_Blotter extends Model {
     }
 
     public function add_narration($data) {
-        $query  = "INSERT INTO narrations (blotter_entry_no, incident_type, incident_place, narration) VALUES (:blotter_entry_no:, :incident_type:, :incident_place:, :narration:)";
+        $query  = "INSERT INTO narrations (blotter_entry_no, incident_type, incident_place, narration, incident_date, incident_time) VALUES (:blotter_entry_no:, :incident_type:, :incident_place:, :narration:, :incident_date:, :incident_time:)";
         return $this->db->query($query, [
             'blotter_entry_no'  => $data['blotter_entry_no'],
             'incident_type'     => $data['incident_type'],
             'incident_place'    => $data['incident_place'],
-            'narration'         => $data['narration']
+            'narration'         => $data['narration'],
+            'incident_date'     => $data['date-of-incident'],
+            'incident_time'     => $data['time-of-incident']
         ]);
     }
 
@@ -177,7 +179,7 @@ class M_Blotter extends Model {
         $victim_name    = '';
         $reporting_name = '';
 
-        $blotter = $this->db->query("SELECT * FROM blotters");
+        $blotter = $this->db->query("SELECT * FROM blotters ORDER BY id DESC");
         foreach( $blotter->getResult('array') as $blttr_row ) {
             $blotter_entry_no   = $blttr_row['blotter_entry_no'];
 
@@ -280,8 +282,20 @@ class M_Blotter extends Model {
                     'id'                => $nrrtn_row['id'],
                     'incident_type'     => $nrrtn_row['incident_type'],
                     'incident_place'    => $nrrtn_row['incident_place'],
-                    'narration'         => $nrrtn_row['narration']
+                    'narration'         => $nrrtn_row['narration'],
+                    'incident_date'     => $nrrtn_row['incident_date'],
+                    'incident_time'     => $nrrtn_row['incident_time']
                 ]);
+            }
+
+            $uid                    = $blttr_row['user_id'];
+            $person_recorded_data   = array();
+            $person_recorded        = $this->db->query("SELECT * FROM users WHERE id = :id:", [
+                'id' => $uid
+            ]);
+            $person_recorded_name   = '';
+            foreach ( $person_recorded->getResult('array') as $prsn_rcrdd_row ) {
+                $person_recorded_name = $prsn_rcrdd_row['firstname'] . ' ' . $prsn_rcrdd_row['lastname'];
             }
 
             array_push($data, [
@@ -295,6 +309,8 @@ class M_Blotter extends Model {
                 'reporting_name'        => $reporting_name,
                 'suspect_name'          => $suspect_name,
                 'victim_name'           => $victim_name,
+                'date'                  => $blttr_row['date_saved'],
+                'person_recorded_name'  => $person_recorded_name,
                 'action'                => '<button type="button" class="btn btn-light btn-sm" id="show-more-btn">More <i class="fa fa-search"></i></button>'
             ]);
         }

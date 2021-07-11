@@ -60,6 +60,17 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-md-flex col-md-10 mb-md-0 mb-3 align-self-center">Overview</div>
+                                <table id="blotters-table" class="table table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Blotter #</th>
+                                            <th class="text-center">Reporting Person</th>
+                                            <th class="text-center">Suspect</th>
+                                            <th class="text-center">Victim</th>
+                                            <th class="text-center">Date</th>
+                                        </tr>
+                                    </thead>
+                                </table>
                             </div>
                         </div>
                     

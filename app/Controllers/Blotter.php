@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
+use Dompdf\Dompdf;
 
 class Blotter extends ResourceController {
 
@@ -9,11 +10,13 @@ class Blotter extends ResourceController {
     protected $request;
     protected $session;
     protected $m_blotter;
+    protected $pdf;
     public function __construct() {
         // Libraries / Helpers
         $this->validation   = \Config\Services::validation();
         $this->request      = \Config\Services::request();
         $this->session      = \Config\Services::session();
+        $this->pdf          = new Dompdf();
         
         helper(['form', 'url']);
 
@@ -30,7 +33,9 @@ class Blotter extends ResourceController {
             'blotter_entry_no'  => $blotter_entry_no,
             'incident_type'     => $this->request->getPost('incident-type'),
             'incident_place'    => $this->request->getPost('incident-place'),
-            'narration'         => $this->request->getPost('narration')
+            'narration'         => $this->request->getPost('narration'),
+            'date-of-incident'  => $this->request->getPost('date-of-incident'),
+            'time-of-incident'  => $this->request->getPost('time-of-incident'),
         ];
         $blotter_data       = [
             'blotter_entry_no'  => $blotter_entry_no,
@@ -467,6 +472,20 @@ class Blotter extends ResourceController {
                 'error' => [
                     'required'      => '{field} is required.'
                 ]
+            ],
+            'date-of-incident'   => [
+                'label' => 'Date of Incident',
+                'rules' => 'required',
+                'error' => [
+                    'required'      => '{field} is required.'
+                ]
+            ],
+            'time-of-incident'   => [
+                'label' => 'Time of Incident',
+                'rules' => 'required',
+                'error' => [
+                    'required'      => '{field} is required.'
+                ]
             ]
         ]);
 
@@ -514,6 +533,24 @@ class Blotter extends ResourceController {
         return json_encode([
             'data'  => $this->m_blotter->get_all()
         ]);
+    }
+
+    public function print_receipt() {
+        $data = [
+            'blotter_no'        => $this->request->getPost('blotter_no'),
+            'incident_type'     => $this->request->getPost('incident_type'),
+            'incident_place'    => $this->request->getPost('incident_place'),
+            'incident_date'     => $this->request->getPost('incident_date'),
+            'incident_time'     => $this->request->getPost('incident_time'),
+            'reporting_name'    => $this->request->getPost('reporting_name'),
+            'reporting_address' => $this->request->getPost('reporting_address'),
+            'person_recorded'   => $this->request->getPost('person_recorded')
+        ];
+
+        $this->pdf->loadHtml(view('pdf/blotter_receipt', $data));
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+        $this->pdf->stream();
     }
 
 }

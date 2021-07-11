@@ -142,6 +142,8 @@ $(document).on('submit', '#msform', function(e) {
             var incident_type           = $('input[name="incident-type"]');
             var incident_place          = $('input[name="incident-place"]');
             var narration               = $('#summernote');
+            var incident_date           = $('input[name="date-of-incident"]');
+            var incident_time           = $('input[name="time-of-incident"]');
 
     var contentStr  = $('#summernote').summernote('code');
 
@@ -241,6 +243,8 @@ $(document).on('submit', '#msform', function(e) {
                 fieldValidation(incident_type, messages["incident-type"]);
                 fieldValidation(incident_place, messages["incident-place"]);
                 fieldValidation(narration, messages.narration);
+                fieldValidation(incident_date, messages["date-of-incident"]);
+                fieldValidation(incident_time, messages["time-of-incident"]);
             }
         },
         beforeSend: function() {
