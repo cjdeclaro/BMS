@@ -72,13 +72,6 @@ class Blotter extends ResourceController {
                     'required'      => '{field} is required.'
                 ]
             ],
-            'reporting.middlename'   => [
-                'label' => 'Middle Name',
-                'rules' => 'required',
-                'error' => [
-                    'required'      => '{field} is required.'
-                ]
-            ],
             'reporting.gender'   => [
                 'label' => 'Gender',
                 'rules' => 'required',
@@ -109,13 +102,6 @@ class Blotter extends ResourceController {
             ],
             'reporting.birthday'   => [
                 'label' => 'Birthday',
-                'rules' => 'required',
-                'error' => [
-                    'required'      => '{field} is required.'
-                ]
-            ],
-            'reporting.qualifier'   => [
-                'label' => 'Qualifier',
                 'rules' => 'required',
                 'error' => [
                     'required'      => '{field} is required.'
@@ -194,13 +180,6 @@ class Blotter extends ResourceController {
                     'required'      => '{field} is required.'
                 ]
             ],
-            'suspect.middlename'   => [
-                'label' => 'Middle Name',
-                'rules' => 'required',
-                'error' => [
-                    'required'      => '{field} is required.'
-                ]
-            ],
             'suspect.gender'   => [
                 'label' => 'Gender',
                 'rules' => 'required',
@@ -231,13 +210,6 @@ class Blotter extends ResourceController {
             ],
             'suspect.birthday'   => [
                 'label' => 'Birthday',
-                'rules' => 'required',
-                'error' => [
-                    'required'      => '{field} is required.'
-                ]
-            ],
-            'suspect.qualifier'   => [
-                'label' => 'Qualifer',
                 'rules' => 'required',
                 'error' => [
                     'required'      => '{field} is required.'
@@ -328,13 +300,6 @@ class Blotter extends ResourceController {
                     'required'      => '{field} is required.'
                 ]
             ],
-            'suspect.influence-of'   => [
-                'label' => 'Influence',
-                'rules' => 'required',
-                'error' => [
-                    'required'      => '{field} is required.'
-                ]
-            ],
 
             // Victim Input Data
             'victim.lastname'   => [
@@ -346,13 +311,6 @@ class Blotter extends ResourceController {
             ],
             'victim.firstname'   => [
                 'label' => 'First Name',
-                'rules' => 'required',
-                'error' => [
-                    'required'      => '{field} is required.'
-                ]
-            ],
-            'victim.middlename'   => [
-                'label' => 'Middle Name',
                 'rules' => 'required',
                 'error' => [
                     'required'      => '{field} is required.'
@@ -496,7 +454,7 @@ class Blotter extends ResourceController {
             $this->m_blotter->add_victim($victim_data);
             
             if( $if_police_personnel !== null || $if_w_previous_crim_record !== null ) {
-                $suspect_id                         = $this->add_suspect_return_id($suspect_data);
+                $suspect_id                         = $this->m_blotter->add_suspect_return_id($suspect_data);
                 $if_police_personnel_DATA           = [
                     'suspect_id'        => $suspect_id,
                     'rank'              => $this->request->getPost('rank'),
@@ -512,7 +470,7 @@ class Blotter extends ResourceController {
                 }
 
                 if( $if_w_previous_crim_record !== null ) {
-                    $this->m_blotter->add_criminal_records();
+                    $this->m_blotter->add_criminal_records($if_w_previous_crim_record_DATA);
                 }
 
             } else {

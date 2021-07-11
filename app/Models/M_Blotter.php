@@ -85,7 +85,7 @@ class M_Blotter extends Model {
         ]);
     }
 
-    public function add_suspect_return_id() {
+    public function add_suspect_return_id($data) {
         $query  = "INSERT INTO suspects ("
                 . "blotter_entry_no, lastname, firstname, middlename, gender, nickname, citizenship, birthday, qualifier, phone, home_no, email, "
                 . "address1, address2, education, occupation, id_presented, height, weight, eyes_color, hair_color, influence_of"
@@ -104,18 +104,18 @@ class M_Blotter extends Model {
             'birthday'          => $data['birthday'],
             'qualifier'         => $data['qualifier'],
             'phone'             => $data['phone'],
-            'home_no'           => $data['home_no'],
+            'home_no'           => $data['home-no'],
             'email'             => $data['email'],
-            'address1'          => $data['address1'],
-            'address2'          => $data['address2'],
+            'address1'          => $data['address-1'],
+            'address2'          => $data['address-2'],
             'education'         => $data['education'],
             'occupation'        => $data['occupation'],
-            'id_presented'      => $data['id_presented'],
+            'id_presented'      => $data['id-presented'],
             'height'            => $data['height'],
             'weight'            => $data['weight'],
-            'eyes_color'        => $data['eyes_color'],
-            'hair_color'        => $data['hair_color'],
-            'influence_of'      => $data['influence_of']
+            'eyes_color'        => $data['eyes-color'],
+            'hair_color'        => $data['hair-color'],
+            'influence_of'      => $data['influence-of']
         ]);
         return $this->db->insertID();
     }
