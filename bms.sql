@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 01:14 PM
+-- Generation Time: Jul 11, 2021 at 05:58 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -58,7 +58,9 @@ CREATE TABLE `narrations` (
   `blotter_entry_no` varchar(50) NOT NULL,
   `incident_type` varchar(100) NOT NULL,
   `incident_place` varchar(100) NOT NULL,
-  `narration` text NOT NULL
+  `narration` text NOT NULL,
+  `incident_date` date DEFAULT NULL,
+  `incident_time` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
