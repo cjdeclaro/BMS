@@ -4,11 +4,23 @@ namespace App\Controllers;
 
 class Dashboard extends BaseController {
 
+    protected $db;
+    public function __construct() {
+        $this->db = \Config\Database::connect();
+    }
+
     public function index() {
+
+        $date           = date('Y-m-d');
+        $blotters       = $this->db->query("SELECT * FROM blotters");
+        $blotters_today = $this->db->query("SELECT * FROM blotters WHERE date_saved LIKE '%$date%'");
+
         $data = [
-            'title'     => 'Dashboard',
-            'content'   => 'dashboard/index',
-            'scripts'   => 'js/index.js'
+            'title'             => 'Dashboard',
+            'content'           => 'dashboard/index',
+            'scripts'           => 'js/index.js',
+            'total_blotters'    => $blotters->getNumRows(),
+            'blotters_today'    => $blotters_today->getNumRows()
         ];
 
         return view('main_template', $data);

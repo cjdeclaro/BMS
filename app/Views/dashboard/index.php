@@ -30,7 +30,7 @@
                                 <h4 class="card-title">Total Cases</h4>
                                 <div class="text-end">
                                     <h2 class="font-light mb-0">
-                                        <i class="ti-arrow-up text-success"></i> 0
+                                        <i class="ti-arrow-up text-success"></i> <?= $total_blotters ?>
                                     </h2>
                                     <span class="text-muted">Total</span>
                                 </div>
@@ -43,7 +43,7 @@
                                 <h4 class="card-title">Cases Today</h4>
                                 <div class="text-end">
                                     <h2 class="font-light mb-0">
-                                        <i class="ti-arrow-up text-primary"></i> 0
+                                        <i class="ti-arrow-up text-primary"></i> <?= $blotters_today ?>
                                     </h2>
                                     <span class="text-muted">Total</span>
                                 </div>
@@ -60,6 +60,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-md-flex col-md-10 mb-md-0 mb-3 align-self-center">Overview</div>
+                                <hr>
                                 <table id="blotters-table" class="table table-hover table-striped">
                                     <thead>
                                         <tr>
